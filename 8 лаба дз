@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h>
+
+double A(int N) {
+	double sum = 0, a = 1, b = 1.1, f = 0.1;
+	for (int i=0; N<10 && i < N; i++)
+	{
+		sum = sum + a * b;
+		a = a * (-1);
+		b = b + f;
+	}
+	return sum;
+}
+ int main(void)
+ {
+	setlocale(LC_ALL, "RUS");
+	int N;
+	puts("Введите значение N");
+	scanf("%d", &N);
+	double result = A(N);
+	printf("%.1lf", result);
+	return 0;
+}
